@@ -2,5 +2,14 @@
     "appHeader": "Electronic Vehicles Population Data",
     "countryLabel": "Select Country:",
     "allCountryOpt": "All Country",
-    "evDistributionHeader": "EV Distribution By Location"
+    "evDistributionHeader": "EV Distribution By Location:",
+    "evModelYearDistribution": "EV Distribution By Make, Model and Year:",
+    "evType": "EV Distribution By Type:",
+    "evRange": "EV Distribution By Battery Range",
+    "makeLabel": "Choose Make",
+    "selectMake": "Select Make",
+    "modelLabel": "Choose Model",
+    "selectMode": "Select Model",
+    "yearLabel": "Choose Year",
+    "selectYear": "Select Year"
 }

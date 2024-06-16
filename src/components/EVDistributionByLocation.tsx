@@ -8,24 +8,24 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import { RawEVData, CountyData, CityData } from "../types";
 import { useTranslation } from "react-i18next";
+import { IRawEVData, ICountryData, ICityData } from "../types";
 
-const EVDistributionComponent: React.FC<{ rawData: RawEVData[] }> = ({
+const EVDistributionComponent: React.FC<{ rawData: IRawEVData[] }> = ({
   rawData,
 }) => {
-  const [countyData, setCountyData] = useState<CountyData[]>([]);
-  const [cityData, setCityData] = useState<CityData[]>([]);
+  const [ICountryData, setICountryData] = useState<ICountryData[]>([]);
+  const [ICityData, setICityData] = useState<ICityData[]>([]);
   const [selectedCounty, setSelectedCounty] = useState<string>("");
 
   const { t: translate } = useTranslation();
 
   const counties = useMemo(
-    () => Array.from(new Set(countyData.map((d) => d.county))),
-    [countyData]
+    () => Array.from(new Set(ICountryData.map((d) => d.county))),
+    [ICountryData]
   );
 
-  const processCountyData = useCallback((data: RawEVData[]) => {
+  const processICountryData = useCallback((data: IRawEVData[]) => {
     const countByCounty = data.reduce((acc, curr) => {
       const county = curr.County;
       if (!acc[county]) {
@@ -33,13 +33,13 @@ const EVDistributionComponent: React.FC<{ rawData: RawEVData[] }> = ({
       }
       acc[county].count += 1;
       return acc;
-    }, {} as Record<string, CountyData>);
+    }, {} as Record<string, ICountryData>);
 
-    const processedCountyData = Object.values(countByCounty);
-    setCountyData(processedCountyData);
+    const processedICountryData = Object.values(countByCounty);
+    setICountryData(processedICountryData);
   }, []);
 
-  const processCityData = useCallback((data: RawEVData[], county: string) => {
+  const processICityData = useCallback((data: IRawEVData[], county: string) => {
     const countByCity = data.reduce((acc, curr) => {
       if (curr.County === county) {
         const city = curr.City;
@@ -49,10 +49,10 @@ const EVDistributionComponent: React.FC<{ rawData: RawEVData[] }> = ({
         acc[city].count += 1;
       }
       return acc;
-    }, {} as Record<string, CityData>);
+    }, {} as Record<string, ICityData>);
 
-    const processedCityData = Object.values(countByCity);
-    setCityData(processedCityData);
+    const processedICityData = Object.values(countByCity);
+    setICityData(processedICityData);
   }, []);
 
   const handleCountyChange = useCallback(
@@ -60,17 +60,17 @@ const EVDistributionComponent: React.FC<{ rawData: RawEVData[] }> = ({
       const county = event.target.value;
       setSelectedCounty(county);
       if (county) {
-        processCityData(rawData, county);
+        processICityData(rawData, county);
       } else {
-        setCityData([]);
+        setICityData([]);
       }
     },
-    [processCityData, rawData]
+    [processICityData, rawData]
   );
 
   useEffect(() => {
-    processCountyData(rawData);
-  }, [processCountyData, rawData]);
+    processICountryData(rawData);
+  }, [processICountryData, rawData]);
 
   return (
     <div>
@@ -92,7 +92,7 @@ const EVDistributionComponent: React.FC<{ rawData: RawEVData[] }> = ({
         </select>
       </div>
       <ResponsiveContainer width="100%" height={400}>
-        <BarChart data={selectedCounty ? cityData : countyData}>
+        <BarChart data={selectedCounty ? ICityData : ICountryData}>
           <XAxis dataKey={selectedCounty ? "city" : "county"} />
           <YAxis />
           <Tooltip />
