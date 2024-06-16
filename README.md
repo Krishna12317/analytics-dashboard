@@ -50,4 +50,23 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 # Analytics Dashboad for EV Population Dataset
 
-This project is a frontend dashboard that visualizes key insights about EV Population dataset, built using React, TypeScript, and other libraries.
+This project is an Electric Vehicle (EV) Dashboard built using React, Vite, and TypeScript. The dashboard visualizes key insights about the EV population using various charts and graphs.
+
+# Clone the repository
+
+```bash
+git clone https://github.com/your-username/ev-dashboard.git
+cd ev-dashboard
+```
+
+# Install Dependencies
+
+```bash
+yarn install
+```
+
+# Start Development Server
+
+```bash
+yarn dev
+```
