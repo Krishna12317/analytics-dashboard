@@ -10,15 +10,22 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/csv-parse": "^1.2.2",
     "@types/d3-shape": "^3.1.6",
+    "@types/recharts": "^1.8.29",
     "axios": "^1.7.2",
+    "csv-parse": "^5.5.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rechart": "^0.0.1"
+    "react-spinners": "^0.13.8",
+    "rechart": "^0.0.1",
+    "recharts": "^2.12.7",
+    "styled-components": "^6.1.11"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
+    "@types/styled-components": "^5.1.34",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",
