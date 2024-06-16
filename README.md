@@ -43,3 +43,11 @@ Your submission will be evaluated based on:
   - ajayap@mapupa.ai
   - divyanshs@mapup.ai
 - Finally, please fill out the google form that you received via email to submit the assessment for review before 2024-06-16 11:59 PM.
+
+# React + TypeScript + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+# Analytics Dashboad for EV Population Dataset
+
+This project is a frontend dashboard that visualizes key insights about EV Population dataset, built using React, TypeScript, and other libraries.
