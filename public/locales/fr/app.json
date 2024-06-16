@@ -1,4 +1,6 @@
 {
+    "appHeader": "Données sur la population de véhicules électroniques",
     "countryLabel": "Choisissez le pays:",
-    "allCountryOpt": "Tout le pays"
+    "allCountryOpt": "Tout le pays",
+    "evDistributionHeader": "Distribution des véhicules électriques par emplacement"
 }

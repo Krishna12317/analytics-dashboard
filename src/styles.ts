@@ -6,3 +6,8 @@ export const StyledLoaderWrapper = styled.div`
   align-items: center;
   height: 400px;
 `;
+
+export const StyledHeaderContainer = styled.div`
+ display: flex;
+ justify-content: center;
+`;

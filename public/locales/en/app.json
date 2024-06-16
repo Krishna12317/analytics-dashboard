@@ -1,4 +1,6 @@
 {
+    "appHeader": "Electronic Vehicles Population Data",
     "countryLabel": "Select Country:",
-    "allCountryOpt": "All Country"
+    "allCountryOpt": "All Country",
+    "evDistributionHeader": "EV Distribution By Location"
 }

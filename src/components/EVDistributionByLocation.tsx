@@ -74,7 +74,7 @@ const EVDistributionComponent: React.FC<{ rawData: RawEVData[] }> = ({
 
   return (
     <div>
-      <h2>EV Distribution By Location</h2>
+      <h2>{translate("evDistributionHeader")}</h2>
       <div>
         <label htmlFor="countySelect">{translate("countryLabel")} </label>
         <select
